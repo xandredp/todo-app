@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <topnav></topnav>
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
@@ -7,6 +8,16 @@
     <router-view />
   </div>
 </template>
+
+<script>
+import topnav from "@/components/Nav";
+
+export default {
+  components: {
+    topnav
+  }
+};
+</script>
 
 <style lang="scss">
 #app {
