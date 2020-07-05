@@ -15,11 +15,19 @@ export default {};
 .advanced-filters {
   width: 25%;
 
+  @media only screen and (max-width: 400px) {
+    width: 35%;
+  }
+
   button {
     width: 100%;
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
     white-space: nowrap;
+
+    @media only screen and (max-width: 400px) {
+      padding: 0.375rem 0.1rem;
+    }
   }
 }
 </style>

@@ -1,13 +1,13 @@
 <template>
   <b-navbar toggleable="lg" type="dark" variant="info">
     <b-navbar-brand href="#">To Do</b-navbar-brand>
-
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
-
     <b-collapse id="nav-collapse" is-nav>
       <b-navbar-nav>
-        <b-nav-item href="#">Link</b-nav-item>
-        <b-nav-item href="#" disabled>Disabled</b-nav-item>
+        <b-nav-item href="#"><router-link to="/">Home</router-link></b-nav-item>
+        <b-nav-item href="#">
+          <router-link to="/about">About</router-link>
+        </b-nav-item>
       </b-navbar-nav>
 
       <!-- Right aligned nav items -->
@@ -36,4 +36,13 @@
 export default {};
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+a {
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.5);
+
+  &.router-link-exact-active {
+    color: #fff;
+  }
+}
+</style>
